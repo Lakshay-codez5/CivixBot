@@ -1,11 +1,12 @@
 from fastapi import FastAPI, UploadFile, File, Form
 from fastapi.middleware.cors import CORSMiddleware
 import tensorflow as tf
-from tensorflow.keras.utils import load_img, img_to_array
 import python_multipart
-from tensorflow.keras.preprocessing import image
+from tensorflow.keras.utils import load_img, img_to_array
 import numpy as np
 import os
+
+# Only keep this if you are using file uploads in FastAPI
 
 app = FastAPI()
 
