@@ -61,6 +61,7 @@ def predict_from_bytes(model, file_bytes: bytes):
     return {"label": top_label, "confidence": round(top_conf, 3)}
 
 def handle_image(image_path: str):
+    model = tf.keras.models.load_model("model.h5")
     with open(image_path, "rb") as f:
         file_bytes = f.read()
     result = predict_from_bytes(model, file_bytes)
