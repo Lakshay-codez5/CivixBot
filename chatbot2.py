@@ -61,7 +61,7 @@ if __name__ == "__main__":
         msg = input("You: ")
         if msg.lower() == "quit":
             break
-        elif msg.lower().endswith((".jpg", ".png")):
+        elif msg.lower().endswith((".jpg", ".png",".avif")):
             print("Bot:", handle_image(msg))
         else:
             print("Bot: Hi! Upload an image of a civic issue and I’ll try to recognize it.")
